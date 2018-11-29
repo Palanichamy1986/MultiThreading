@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MutliThreading" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fUg-gp-zhU">
+                                <rect key="frame" x="67.5" y="86" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="B1m-Mv-fXC"/>
+                                    <constraint firstAttribute="height" constant="128" id="spb-VA-8kv"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIw-GI-oUZ">
+                                <rect key="frame" x="153" y="308" width="69" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3bO-9a-654"/>
+                                </constraints>
+                                <state key="normal" title="Download"/>
+                                <connections>
+                                    <action selector="btnDownloadClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="adq-Sr-HIL"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="v6G-EP-0KS">
+                                <rect key="frame" x="169" y="255" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="D03-wG-lwF"/>
+                                    <constraint firstAttribute="height" constant="37" id="XIB-fR-W3c"/>
+                                </constraints>
+                                <color key="color" red="0.72156862749999995" green="0.12549019610000001" blue="0.1450980392" alpha="1" colorSpace="deviceRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EIw-GI-oUZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9ap-Vf-o4q"/>
+                            <constraint firstItem="fUg-gp-zhU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hkx-yT-ESM"/>
+                            <constraint firstItem="v6G-EP-0KS" firstAttribute="top" secondItem="fUg-gp-zhU" secondAttribute="bottom" constant="41" id="l3m-uH-xNv"/>
+                            <constraint firstItem="EIw-GI-oUZ" firstAttribute="top" secondItem="fUg-gp-zhU" secondAttribute="bottom" constant="94" id="mQa-d4-RTO"/>
+                            <constraint firstItem="fUg-gp-zhU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="pEC-bP-aKY"/>
+                            <constraint firstItem="v6G-EP-0KS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pJz-zq-uxa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="v6G-EP-0KS" id="bCH-Lk-HBI"/>
+                        <outlet property="imgView" destination="fUg-gp-zhU" id="xe4-e4-fvg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
